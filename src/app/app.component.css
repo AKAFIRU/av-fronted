@@ -1,16 +1,14 @@
-.example-container {
-    width: 500px;
-    height: 300px;
-    border: 1px solid rgba(0, 0, 0, 0.5);
-  }
-  
-  .example-sidenav-content {
-    display: flex;
-    height: 100%;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .example-sidenav {
-    padding: 20px;
-  }
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar-container {
+  width: 15%;
+  background-color: #673ab7;;
+}
+
+.content-container {
+  flex-grow: 1;
+  padding: 20px; /* Ajusta el valor según el espacio deseado */
+}

@@ -8,8 +8,6 @@ import { Component } from '@angular/core';
   styleUrl: './upload-archives.component.css'
 })
 export class UploadArchivesComponent {
-  openFileSelector() {
-    document.getElementById('fileInput').click();
-  }
+
 
 }

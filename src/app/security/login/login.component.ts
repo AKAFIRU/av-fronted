@@ -14,19 +14,15 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 })
 export class LoginComponent implements OnInit{
 
-  loginForm: FormGroup;
 
   constructor(private fb: FormBuilder,
     private router: Router) {
-    this.loginForm = this.fb.group({
-      username: ['', Validators.required],
-      password: ['', Validators.required]
-    });
+   
   }
 ngOnInit(): void {
   
 }
-onSubmit(): void {
+Navegar(): void {
   this.router.navigate(["user-management"]);
   } 
   

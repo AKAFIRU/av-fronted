@@ -2,15 +2,20 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import {MatButtonModule} from '@angular/material/button';
 import {MatSidenavModule} from '@angular/material/sidenav';
+import { SidebarComponent } from "./shared/sidebar/sidebar.component";
 
 @Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [RouterOutlet,MatSidenavModule, MatButtonModule],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+    selector: 'app-root',
+    standalone: true,
+    templateUrl: './app.component.html',
+    styleUrl: './app.component.css',
+    imports: [RouterOutlet, MatSidenavModule, MatButtonModule, SidebarComponent]
 })
 export class AppComponent {
   title = 's-app';
   showFiller = false;
+
+  public isLoggedIn: boolean = false;
+  
+ 
 }

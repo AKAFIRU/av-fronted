@@ -14,19 +14,19 @@ export interface DialogData {
 export interface UserData {
   id: string;
   name: string;
-  progress: string;
+
   fruit: string;
 }
 
 const FRUITS: string[] = [
-  'blueberry',
-  'lychee',
-  'kiwi',
-  'mango',
-  'peach',
-  'lime',
-  'pomegranate',
-  'pineapple',
+  '421412',
+  '151254',
+  '251251',
+  '324324',
+  '876731',
+  'prueba',
+  'prueb1',
+  'prueb3',
 ];
 const NAMES: string[] = [
   'Maia',
@@ -64,7 +64,7 @@ const NAMES: string[] = [
   styleUrl: './user-management.component.css',
 })
 export class UserManagementComponent implements AfterViewInit {
-  displayedColumns: string[] = ['id', 'name', 'progress', 'fruit'];
+  displayedColumns: string[] = ['id', 'name', 'fruit'];
   dataSource: MatTableDataSource<UserData>;
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
@@ -111,7 +111,6 @@ function createNewUser(id: number): UserData {
   return {
     id: id.toString(),
     name: name,
-    progress: Math.round(Math.random() * 100).toString(),
     fruit: FRUITS[Math.round(Math.random() * (FRUITS.length - 1))],
   };
 }
