@@ -1,29 +1,29 @@
-<!-- <div class="canvas">
-    <h3>
-        Nuevo Proyecto
-    </h3>
-    <div class="contenedor">
-        <form [formGroup]="proyectoForm" (ngSubmit)="onSubmit()">
-            <mat-form-field appearance="fill">
-              <mat-label>Nombre del Proyecto</mat-label>
-              <input matInput formControlName="proyectoNombre">
-            </mat-form-field>
-          
-            <mat-form-field appearance="fill">
-              <mat-label>Fecha de Creación</mat-label>
-              <input matInput [matDatepicker]="picker1" formControlName="fechaCreacion">
-              <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
-              <mat-datepicker #picker1></mat-datepicker>
-            </mat-form-field>
-          
-            <mat-form-field appearance="fill">
-              <mat-label>Fecha de Finalización</mat-label>
-              <input matInput [matDatepicker]="picker2" formControlName="fechaFinali">
-              <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
-              <mat-datepicker #picker2></mat-datepicker>
-            </mat-form-field>
-          
-            <button mat-raised-button color="primary" type="submit">Guardar</button>
-          </form>
-    </div>
-</div> -->
+<h2 mat-dialog-title>Agregar Estudiante</h2>
+<mat-dialog-content>
+  <form [formGroup]="docenteForm" (ngSubmit)="onSubmit()">
+    <mat-form-field appearance="fill">
+      <mat-label>Nombre</mat-label>
+      <input matInput formControlName="nombre" required>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Apellido</mat-label>
+      <input matInput formControlName="apellido" required>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Correo</mat-label>
+      <input matInput formControlName="correo" required>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Código Institucional</mat-label>
+      <input matInput formControlName="codigoInsti" required>
+    </mat-form-field>
+
+    <mat-dialog-actions>
+      <button mat-button mat-dialog-close>Cancelar</button>
+      <button mat-button type="submit">Guardar</button>
+    </mat-dialog-actions>
+  </form>
+</mat-dialog-content>

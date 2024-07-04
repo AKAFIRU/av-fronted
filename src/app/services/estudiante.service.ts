@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class EstudianteService {
 
-  private apiUrl = 'https://av-backend-90b745e0b89c.herokuapp.com/docentes'
+  private apiUrl = 'https://av-backend-90b745e0b89c.herokuapp.com/estudiantes'
   constructor(private http: HttpClient) { }
   
   getEstudiantes(): Observable<any> {

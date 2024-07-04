@@ -1,1 +1,29 @@
-dfajfioasjfas
+<h2 mat-dialog-title>Agregar Docente</h2>
+<mat-dialog-content>
+  <form [formGroup]="docenteForm" (ngSubmit)="onSubmit()">
+    <mat-form-field appearance="fill">
+      <mat-label>Nombre</mat-label>
+      <input matInput formControlName="nombre" required>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Apellido</mat-label>
+      <input matInput formControlName="apellido" required>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Correo</mat-label>
+      <input matInput formControlName="correo" required>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Código Institucional</mat-label>
+      <input matInput formControlName="codigoInsti" required>
+    </mat-form-field>
+
+    <mat-dialog-actions>
+      <button mat-button mat-dialog-close>Cancelar</button>
+      <button mat-button type="submit">Guardar</button>
+    </mat-dialog-actions>
+  </form>
+</mat-dialog-content>

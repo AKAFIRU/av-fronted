@@ -11,11 +11,11 @@ import { CrearDocentesComponent } from './components/crear-docentes/crear-docent
 import { CrearEstudiantesComponent } from './components/crear-estudiantes/crear-estudiantes.component';
 
 export const routes: Routes = [
-  { path: '', component: LoginComponent },
+  { path: 'login', component: LoginComponent },
   { path: 'user-management', component: UserManagementComponent },
   { path: 'upload', component: UploadArchivesComponent},
   { path: 'home', component: HomeComponent},
-  { path: 'home-estudiantes', component:HomeEstudiantesComponent},
+  { path: '', component:HomeEstudiantesComponent},
   { path: 'cronograma', component:CronogramaComponent},
   { path: 'registro-pro', component:RegistrosProyectoComponent},
   { path: 'seccion-est', component:SeccionEstudiantesComponent},
