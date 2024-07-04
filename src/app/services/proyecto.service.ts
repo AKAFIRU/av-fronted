@@ -19,4 +19,8 @@ export class ProyectoService {
   getProyectosBySeccion(): Observable<any>{
     return this.http.get<any>(this.apiUrl + '/por-seccion/1');
   }
+
+  getProyectos(): Observable<any>{
+    return this.http.get<any>(this.apiUrl);
+  }
 }

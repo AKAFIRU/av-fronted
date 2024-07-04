@@ -9,6 +9,8 @@ import { RegistrosProyectoComponent } from './components/registros-proyecto/regi
 import { SeccionEstudiantesComponent } from './components/seccion-estudiantes/seccion-estudiantes.component';
 import { CrearDocentesComponent } from './components/crear-docentes/crear-docentes.component';
 import { CrearEstudiantesComponent } from './components/crear-estudiantes/crear-estudiantes.component';
+import { CrearProyectoComponent } from './components/crear-proyecto/crear-proyecto.component';
+import { CrearCursoComponent } from './components/crear-curso/crear-curso.component';
 
 export const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -20,5 +22,7 @@ export const routes: Routes = [
   { path: 'registro-pro', component:RegistrosProyectoComponent},
   { path: 'seccion-est', component:SeccionEstudiantesComponent},
   { path: 'crea-est', component: CrearEstudiantesComponent},
-  { path: 'crea-doc', component: CrearDocentesComponent}
+  { path: 'crea-doc', component: CrearDocentesComponent},
+  { path: 'crea-pro', component: CrearProyectoComponent},
+  { path: 'crea-cur', component: CrearCursoComponent}
 ];
