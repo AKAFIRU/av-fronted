@@ -1,0 +1,9 @@
+.canvas {
+    padding: 20px;
+  }
+
+  .button-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }

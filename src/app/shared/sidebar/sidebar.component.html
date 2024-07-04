@@ -1,46 +1,46 @@
 <mat-nav-list class="sidebar">
     <h3 matSubheader class="sidebar-title">AV</h3>
     <!-- DIVISOR DE NAVBAR -->
+
+    <ul>
+      <li>
+        <mat-list-item routerLink="/home">
+          <mat-icon mat-list-icon>home</mat-icon>
+          <span mat-line class="sidebar-item">Inicio</span>
+        </mat-list-item>
+      </li>
+    </ul>
+    <ul>
+      <li>
+        <mat-list-item routerLink="/home-estudiantes">
+          <mat-icon mat-list-icon>home</mat-icon>
+          <span mat-line class="sidebar-item">Inicio estudiantes</span>
+        </mat-list-item>
+      </li>
+    </ul>
+    <ul>
+      <li>
+        <mat-list-item routerLink="/xd">
+          <mat-icon mat-list-icon>account_circle</mat-icon>
+          <span mat-line class="sidebar-item">Crear Docente</span>
+        </mat-list-item>
+      </li>
+    </ul>
+    <ul>
+      <li>
+        <mat-list-item routerLink="/xd">
+          <mat-icon mat-list-icon>account_circle</mat-icon>
+          <span mat-line class="sidebar-item">Crear Estudiante</span>
+        </mat-list-item>
+      </li>
+    </ul>
+    <ul>
+      <li>
+        <mat-list-item routerLink="/registro-pro">
+          <mat-icon mat-list-icon>book</mat-icon>
+          <span mat-line class="sidebar-item">Registro de proyecto</span>
+        </mat-list-item>
+      </li>
+    </ul>
     <mat-divider></mat-divider>
-    <ul>
-      <li>
-        <mat-list-item routerLink="/user-management">
-          <mat-icon mat-list-icon>home</mat-icon>
-          <span mat-line class="sidebar-item">Administrar usuarios </span>
-        </mat-list-item>
-      </li>
-    </ul>
-    <ul>
-      <li>
-        <mat-list-item>
-          <mat-icon mat-list-icon>home</mat-icon>
-          <span mat-line class="sidebar-item">Subida de tareas </span>
-        </mat-list-item>
-      </li>
-    </ul>
-    <ul>
-      <li>
-        <mat-list-item>
-          <mat-icon mat-list-icon>home</mat-icon>
-          <span mat-line class="sidebar-item">Calendario de entregables</span>
-        </mat-list-item>
-      </li>
-    </ul>
-    <!-- ITEM DE NAVBAR -->
-    <ul>
-        <li>
-          <mat-list-item>
-            <mat-icon mat-list-icon>home</mat-icon>
-            <span mat-line class="sidebar-item">Registro de proyecto</span>
-          </mat-list-item>
-        </li>
-      </ul>
-    <!-- DIVISOR DE NAVBAR -->
-    <mat-divider></mat-divider>
-    <!-- ITEM DE NAVBAR -->
-    <mat-list-item (click)="logout()" routerLink="">
-      <mat-icon mat-list-icon>logout</mat-icon>
-      <span mat-line class="sidebar-item">Log Out</span>
-    </mat-list-item>
-  </mat-nav-list>
   

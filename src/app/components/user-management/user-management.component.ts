@@ -7,26 +7,23 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatDialog } from '@angular/material/dialog';
 import { UserEditionDialogComponent } from '../../dialogs/user-edition-dialog/user-edition-dialog.component';
 
-export interface DialogData {
-  animal: 'panda' | 'unicorn' | 'lion';
-}
-
 export interface UserData {
   id: string;
   name: string;
-
+  progress: string;
   fruit: string;
 }
 
+/** Constants used to fill up our data base. */
 const FRUITS: string[] = [
-  '421412',
-  '151254',
-  '251251',
-  '324324',
-  '876731',
-  'prueba',
-  'prueb1',
-  'prueb3',
+  'blueberry',
+  'lychee',
+  'kiwi',
+  'mango',
+  'peach',
+  'lime',
+  'pomegranate',
+  'pineapple',
 ];
 const NAMES: string[] = [
   'Maia',
@@ -64,15 +61,15 @@ const NAMES: string[] = [
   styleUrl: './user-management.component.css',
 })
 export class UserManagementComponent implements AfterViewInit {
-  displayedColumns: string[] = ['id', 'name', 'fruit'];
+  displayedColumns: string[] = ['id', 'name', 'progress', 'fruit'];
   dataSource: MatTableDataSource<UserData>;
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
 
-  constructor(public dialog: MatDialog) {
+  constructor() {
     // Create 100 users
-    const users = Array.from({ length: 100 }, (_, k) => createNewUser(k + 1));
+    const users = Array.from({length: 100}, (_, k) => createNewUser(k + 1));
 
     // Assign the data to the data source for the table to render
     this.dataSource = new MatTableDataSource(users);
@@ -83,13 +80,6 @@ export class UserManagementComponent implements AfterViewInit {
     this.dataSource.sort = this.sort;
   }
 
-  openDialog() {
-    this.dialog.open(UserEditionDialogComponent, {
-      data: {
-        animal: 'panda',
-      },
-    });
-  }
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
     this.dataSource.filter = filterValue.trim().toLowerCase();
@@ -111,6 +101,7 @@ function createNewUser(id: number): UserData {
   return {
     id: id.toString(),
     name: name,
+    progress: Math.round(Math.random() * 100).toString(),
     fruit: FRUITS[Math.round(Math.random() * (FRUITS.length - 1))],
   };
 }

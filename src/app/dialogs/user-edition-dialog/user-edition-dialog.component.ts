@@ -1,6 +1,5 @@
 import { Component, Inject } from '@angular/core';
-import { MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { DialogData } from '../../components/user-management/user-management.component';
+
 
 @Component({
   selector: 'app-user-edition-dialog',
@@ -10,5 +9,5 @@ import { DialogData } from '../../components/user-management/user-management.com
   styleUrl: './user-edition-dialog.component.css',
 })
 export class UserEditionDialogComponent {
-  constructor(@Inject(MAT_DIALOG_DATA) public data: DialogData) {}
+  constructor() {}
 }

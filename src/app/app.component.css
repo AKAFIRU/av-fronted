@@ -4,11 +4,23 @@
 }
 
 .sidebar-container {
-  width: 15%;
+  width: 16%;
   background-color: #673ab7;;
 }
 
 .content-container {
   flex-grow: 1;
-  padding: 20px; /* Ajusta el valor según el espacio deseado */
+  padding: 0px; 
+}
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.toolbar {
+  background-color: #673ab7;
+  color: white;
+}
+
+.toolbar-container {
+  background-color: #673ab7;
 }

@@ -1,0 +1,32 @@
+<div class="canvas">
+    <h1>Proyectos del curso</h1>
+    <div class="card-container">
+        <div *ngFor="let item of dataFromService" class="card" mat-elevation-z4>
+            <mat-card class="mat-card-hover">
+                <mat-card-header>
+                    <mat-card-title>{{ item.nombre_proyecto }}</mat-card-title>
+                    <mat-card-subtitle>Fecha limite: {{ item.fecha_limite }}</mat-card-subtitle>
+                </mat-card-header>
+                <mat-expansion-panel (opened)="loadEntregables(item.proyecto_id)">
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>
+                            Ver entregables
+                        </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <div *ngFor="let entregable of item.entregables; let i = index">
+                        <mat-expansion-panel>
+                            <mat-expansion-panel-header>
+                                <mat-panel-title>
+                                    Entregable {{ i + 1 }}
+                                </mat-panel-title>
+                                <mat-icon [ngStyle]="{ color: getIconColor(entregable.fechaLimite) }">class</mat-icon>
+                            </mat-expansion-panel-header>
+                            <p>Fecha límite: {{ entregable.fechaLimite }}</p>
+                            <button mat-raised-button>Subir entregable</button>
+                        </mat-expansion-panel>
+                    </div>
+                </mat-expansion-panel>
+            </mat-card>
+        </div>
+    </div>
+</div>

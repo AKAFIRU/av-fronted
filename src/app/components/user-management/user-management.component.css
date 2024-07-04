@@ -1,20 +1,16 @@
-table {
-    width: 100%;
-  }
-  
-  .mat-mdc-form-field {
-    font-size: 14px;
-    width: 100%;
-  }
-  
-  td, th {
-    width: 25%;
-  }
-
-.title {
-    border-bottom: 2px solid black;
+.canvas {
+  padding: 20px;
 }
 
-.filter-and-buttons {
-    padding-top: 40px;
+table {
+  width: 100%;
+}
+
+.mat-mdc-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+
+td, th {
+  width: 25%;
 }
