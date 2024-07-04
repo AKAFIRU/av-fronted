@@ -1,0 +1,42 @@
+/* secciones.component.css */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  .card {
+    flex: 1 1 calc(33% - 10px);
+    margin: 5px;
+    box-sizing: border-box;
+    transition: transform 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px); /* Puedes ajustar la distancia que se eleva */
+}
+
+.mat-card-hover {
+    cursor: pointer; /* Cambia el cursor al pasar sobre la tarjeta */
+}
+
+  mat-card {
+    width: 450px;
+  }
+  .add-card-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px; /* Ajusta la altura según tus necesidades */
+}
+
+.add-icon {
+    font-size: 30px; /* Ajusta el tamaño del icono según tus necesidades */
+    cursor: pointer;
+    color: #00796b; /* Ajusta el color según tus necesidades */
+}
+
+.canvas {
+  padding: 20px;
+}
+

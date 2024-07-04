@@ -7,6 +7,8 @@ import { HomeEstudiantesComponent } from './components/home-estudiantes/home-est
 import { CronogramaComponent } from './components/cronograma/cronograma.component';
 import { RegistrosProyectoComponent } from './components/registros-proyecto/registros-proyecto.component';
 import { SeccionEstudiantesComponent } from './components/seccion-estudiantes/seccion-estudiantes.component';
+import { CrearDocentesComponent } from './components/crear-docentes/crear-docentes.component';
+import { CrearEstudiantesComponent } from './components/crear-estudiantes/crear-estudiantes.component';
 
 export const routes: Routes = [
   { path: '', component: LoginComponent },
@@ -16,5 +18,7 @@ export const routes: Routes = [
   { path: 'home-estudiantes', component:HomeEstudiantesComponent},
   { path: 'cronograma', component:CronogramaComponent},
   { path: 'registro-pro', component:RegistrosProyectoComponent},
-  { path: 'seccion-est', component:SeccionEstudiantesComponent}
+  { path: 'seccion-est', component:SeccionEstudiantesComponent},
+  { path: 'crea-est', component: CrearEstudiantesComponent},
+  { path: 'crea-doc', component: CrearDocentesComponent}
 ];
